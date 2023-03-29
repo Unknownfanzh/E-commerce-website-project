@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     
     <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
 
     <link rel="stylesheet" href="{% static 'shop/style.css' %}">
     <title>Document</title>
@@ -31,7 +34,10 @@
                           <a class="nav-link" href="#">Features</a>
                         </li>
                         <li class="nav-item">
-                          <a id="cart" class="nav-link" href="#">Cart(0)</a>
+                            <button id="cart" type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus
+                            sagittis lacus vel augue laoreet rutrum faucibus.">
+                              Cart(0)
+                            </button>
                         </li>
                         <li class="nav-item">
                           <a class="nav-link disabled" href="#">Disabled</a>
@@ -133,7 +139,9 @@
         document.getElementById("cart").innerHTML = "Cart("+ Object.keys(cart).length +")";
 
     });
-
+    $(function () {
+        $('[data-toggle="popover"]').popover()
+      })
 
 
 </script>
