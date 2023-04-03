@@ -150,11 +150,12 @@
         var cartString = "";
         cartString += "<h5>This is your cart</h5>";
         var cartIndex = 1;
-        for(var x in cart){
+        let cartObject = JSON.parse(localStorage.getItem('cart'))
 
-            cartString += cartIndex;
-            cartString += document.getElementById("nm"+x).innerHTML + "Qty:" + cart[x][0] + "</br>";
-            cartIndex += 1;
+        for(item in cartObject){
+            console.log(cartObject[item][0])
+            console.log(cartObject[item][1])
+            cartString += cartObject[item][1] + "Qty: " + cartObject[item][0] + "</br >";
 
         }
 
