@@ -1,5 +1,6 @@
 # Django E-commerce Web Application
 This is a simple e-commerce web application built using Django framework. The web application allows users to browse through various products, view product details and checkout by placing an order.
+![image](https://user-images.githubusercontent.com/106033434/230819932-8f634071-e584-4d66-acea-6c05466a857e.png)
 
 ## Key aspects of the project
 - **Django framework**: We used Django, a Python web framework, to build this e-commerce website. Django's Model-View-Template (MVT) architecture was used for the backend.
