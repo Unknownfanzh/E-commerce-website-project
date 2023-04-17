@@ -20,7 +20,7 @@ def index(request):
     item_name = request.GET.get('item_name')
     if item_name != '' and item_name is not None:
         product_objects = product_objects.filter(title__icontains=item_name)
-        
+
     # Paginator code
     # Paginate the product objects to show only a certain number of products per page
     paginator = Paginator(product_objects, 4)
