@@ -12,7 +12,6 @@ class Products(models.Model):
     description = models.TextField()
     image = models.CharField(max_length=300)
 
-
 class Order(models.Model):
     """
     Model class representing an order in the shop app.
